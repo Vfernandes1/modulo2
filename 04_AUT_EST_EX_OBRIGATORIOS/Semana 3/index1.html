@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT-EST-VINI-T2</title>
+</head>
+<body>
+
+    <center><h1> Calculadora  da Altura Máxima e o Tempo de Subida da Bola</h1></center>
+    <p id="paragrafo1"></p>  <br />
+    <p id="paragrafo2"></p>
+    <div  class="ok" id="resu">
+
+    </div>
+    <input type="text" name="valor1" id="v1">
+    <button onclick="calcular()"> Calcular Tempo de Subida e Altura Máxima</button>
+</html>
+
+
+<script>
+
+
+    var velo = document.querySelector("#v1");
+    var g = 10
+   
+    var paragrafo1 = document.querySelector("#paragrafo1")
+    var paragrafo2 = document.querySelector("#paragrafo2")
+    function calcular(){
+        var Ts = parseInt(velo.value) / g;
+        var Hmax = parseInt(velo.value ** 2) / parseInt(2*g);
+        paragrafo1.innerHTML = `Tempo de Subida: ${Ts}`
+        paragrafo2.innerHTML = `Altura Máxima: ${Hmax}`
+    }
+</script>
+</body>
