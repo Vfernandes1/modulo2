@@ -8,6 +8,10 @@
 </head>
 <body>
     <center><h1 style= "background-color: coral;">Calculadora  da Altura Máxima e o Tempo de Subida da Bola</h1></center>
+
+    <p style="font-weight: bold;">Insira a velocidade inicial no espaço abaixo:</p>
+
+    <br>
     <p id="paragrafo1"></p>  <br />
     <p id="paragrafo2"></p>
     <div  class="ok" id="resu">
@@ -21,7 +25,6 @@
 
 <script>
 
-
     var velo = document.querySelector("#v1");
     var g = 10
    
@@ -33,5 +36,6 @@
         paragrafo1.innerHTML = `Tempo de Subida: ${Ts}`
         paragrafo2.innerHTML = `Altura Máxima: ${Hmax}`
     }
+
 </script>
 </body>
