@@ -57,7 +57,7 @@ function Clicar(num1, num2) {
 
     return num1 + num2;
 
-    console.log() = resultado
+    
 };
 
 /* Função que calcula uma operação entre dois números recebidos como parâmetro */
