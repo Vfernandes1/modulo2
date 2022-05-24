@@ -19,6 +19,7 @@
         <option value="-">Subtração</option>
         <option value="*"> Multiplicação</option>
         <option value="/">Divisão</option>
+        <option value="//">Resto</option>
     </select>
     <input id="Numero 2">
     <button> Calcular</button>
@@ -27,9 +28,9 @@
     var primeiroValor = parseInt(prompt('Digite Primeiro Valor:'))
 
     do {
-        var operacao = prompt('Coloque a operação matématica (USE +; -; *; / e %)');
+        var operacao = prompt('Coloque a operação matématica (USE +; -; *; / ; // e %)');
 
-    } while (operacao !=='+' && operacao !=='-' && operacao !=='/' && operacao !=='*'  && operacao !=='%')
+    } while (operacao !=='+' && operacao !=='-' && operacao !=='/' && operacao !=='*'  && operacao !=='%' && operacao !=='//')
 
     var segundoValor = parseInt(prompt('Digite Segundo Valor:'))
 
@@ -56,6 +57,9 @@
             resultado = primeiroValor*segundoValor/100;
             alert(resultado)
             break
+        case "//":
+            resultado = primeiroValor % segundoValor
+            alert(resultado)
     }
 
     // var calcular = document.getElementById("#Numero 1", "#Numero 2")
