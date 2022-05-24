@@ -13,25 +13,29 @@
 </head>
 <body>
     
-    <h1>
-        O preço do produto é:
-    </h1>
- 
-<script>
-    var saque = int()
-
-console.log("Valor do Saque")
-
-    print("Valor do saque: ")
-        alert(saque)
-
-print1("Número de cédulas de R$ 100: ", saque/100)
-    saque = saque - saque/100*100
+    <h2>Valor do produto
+        <input type="text" id="#valorP">
+    </h2><br>
+    <button onclick="calculo()">Ver quantidade de notas</button>
+    <p id="#NOTAS"></p>
 
 
-console.log("Número de cédulas de R$ 50: ", saque/50)
-    saque = saque*50/100
-74
+<!-- //     {
+//     var saque = int()
+
+// console.log("Valor do Saque")
+
+//     print("Valor do saque: ")
+//         alert(saque)
+
+// print1("Número de cédulas de R$ 100: ", saque/100)
+//     saque = saque - saque/100*100
+
+
+// console.log("Número de cédulas de R$ 50: ", saque/50)
+//     saque = saque*50/100
+// }
+// 74
 // escreval ("Número de cédulas de R$ 20: ",saque\20)
 // saque <- saque%20
 // escreval ("Número de cédulas de R$ 10: ",saque\10)
@@ -40,7 +44,64 @@ console.log("Número de cédulas de R$ 50: ", saque/50)
 // saque <- saque%5
 // escreval ("Número de cédulas de R$ 2: ",saque\2)
 // saque <- saque%2
-// escreval ("Número de cédulas de R$ 1: ",saque)
+// escreval ("Número de cédulas de R$ 1: ",saque) -->
+
+
+
+<script>
+
+        
+    var most = document.querySelector("#NOTAS")
+    function calculo() 
+    let val = (document.querySelector("#valorP"))
+    var valor = val.value
+    var nota100 = 0
+    var nota50 = 0
+    var nota20 = 0
+    var nota10 = 0
+    var nota5 = 0
+    var nota2 = 0 
+   
+    while (valor >= 100); {
+        nota100 += 1;
+        valor = valor - 100;
+        var nota_1 = String(nota100 + " notas de R$: 100,00")
+    } while (valor >= 50) {
+        nota50 += 1;
+        valor = valor - 50;
+        var nota_2 = String(nota50 + " notas de R$: 50,00") }
+    
+     while (valor >= 20) {
+        nota20 += 1;
+        valor = valor - 20;
+        var nota_3 = String(nota20 + " notas de R$: 20,00")
+    }
+
+    while (valor >= 10) {
+        nota10 += 1;
+        valor = valor - 10;
+        var nota_4 = String(nota10 + " notas de R$: 10,00")
+    }
+
+
+    while (valor >= 5) {
+        nota5 += 1;
+        valor = valor - 5;
+        var nota_5 = String(nota5 + " notas de R$: 5,00")
+    }
+
+    while (valor >= 2) {
+        nota2 += 1;
+        valor = valor - 2;
+        var nota_6 = String(nota2 + " notas de R$: 2,00");
+    
+    }
+    
+    {
+        most.innerHTML= String(nota_1 + ", \n " + nota_2 + ", \n " + nota_3 + ", \n" + nota_4 + ", \n" + nota_5 + ", \n" + nota_6); }
+
+
+</script>
 
 </script>
     
