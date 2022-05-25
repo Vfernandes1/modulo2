@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VINI-AUT-OBG-EX-3</title>
+</head>
+<body style="background-color: yellow;">
+
+    <div>
+        <h3>Digite os números aqui (ordene por vírgula)
+            <input type="text" name="valor1" id="valor1">
+        </h3>
+        
+        <h4>"Valor Foco"
+            <input type="text" name="valor2" id="valor2">
+        </h4>
+        <button onclick="ordenar()">Orderne sua Lista</button>
+    </div>
+    <span id="nA"></span>
+    <br>
+    <span id="nB"></span>
+
+        <script>
+
+            // declaração das funções e variáveis 
+
+            function ordenar(){
+            var campo1 = document.getElementById("nA")
+            var campo2 = document.getElementById("nB")
+            var input2 = String(document.getElementById("valor2").value)
+            var valor = String(document.getElementById("valor1").value)
+            var lista = valor.split(",")
+
+            // sort aprendi um pouco da internet, mas nesse caso foi a única que pensei para colocar
+           
+            lista.sort();
+            console.log(lista)
+            campo1.innerHTML = lista
+            if(lista.includes(input2)){
+            var resu2 = lista.indexOf(input2)
+            campo2.innerHTML = resu2
+            }
+            else{
+                console.log("UNDEFINED")
+                campo2.innerHTML = "UNDEFINED"
+            }
+            }   
+</script>
+    
+</body>
+</html>
