@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT-EST-VINI-T2</title>
+</head>
+<body>
+    <center><h1>Adicione e Subtraia uma Unidade</h1></center>
+
+    
+
+    <input type="text" name="valor1" id="valor">
+    <button onclick="adicionar()">adicione</button>
+    <button onclick="subtraia()" name="valor2" id="sub">subtraia</button>
+</html>
+
+
+<script>
+
+    var valor = document.getElementById("valor");
+
+    function adicionar () {
+        let receba = parseInt(valor.value);
+        let conta = receba + 1;
+        valor.value = conta; 
+        
+    }
+    
+    function subtraia () {
+        let receba2 = parseInt(valor.value);
+        let conta2 = receba2 - 1;
+        valor.value = conta2;
+
+    }
+
+
+
+</script>
+</body>
