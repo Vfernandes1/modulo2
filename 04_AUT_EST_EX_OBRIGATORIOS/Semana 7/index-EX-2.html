@@ -17,14 +17,26 @@
     </div>
     <input type="text" name="valor1" id="v1">
     <input type="text" name="valor2" id="v2">
-    <button onclick="calcular()">Troca</button>
+    <button onclick="Troque()">Troca</button>
 </html>
 
-
 <script>
-    
+//    Basicamente, o que foi feito aqui, foi usar o valor em um campo, e quando a função rodar, 
+//    ele será substituido com o elemento presente no outro campo 
+
+//    O "campo" nesse caso é o input
+
+    function Troque() {
+
+        let valor1 = document.getElementById("v1").value;
+        let valor2 = document.getElementById("v2").value;
+
+        document.getElementById("v1").value = valor2;
+        document.getElementById("v2").value = valor1;
+        
 
 
+    }
 
 </script>
 </body>
