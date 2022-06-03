@@ -1,4 +1,4 @@
-# Exercício para entrega na SEMANA 7 - referente ao conteúdo trabalhado na etapa 6 (`SEMANA06/02_TUTORIAL`)
+# Vinícius Fernandes - Exercício Entrega - SEMANA 7
 
 ## Descrição
 Endpoints criados, com todos os métodos que foram apresentados em aula.
