@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUT-EST-VINI-T2</title>
 </head>
-<body>
-    <center><h1>Teu telefone?</h1></center>
+<body style="background-color: #DBC7BE;">
+    <center><h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Teu telefone?</h1></center>
 
-    <label for="telefone">Telefone</label>
-    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
-    <button>Enviar Número</button>
+    <label for="telefone" style="font-family: 'Lucida Sans' ;">Telefone</label>
+
+    <!-- uso do maxlength para controlar o tamanho de caracteres dentro do input -->
+    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx" maxlength="11">
+    <button onclick="cadastro()">Enviar Número</button>
 </html>
 
 
 <script>
+    //  função que da um alerta ali em cima, sobre o número ter sido enviado!
     
-    
+    function cadastro(){
+        alert('Número Enviado com Sucesso!!');
+}
 
 </script>
 </body>

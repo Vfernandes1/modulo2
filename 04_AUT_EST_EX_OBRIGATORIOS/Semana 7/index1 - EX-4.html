@@ -7,35 +7,42 @@
     <title>AUT-EST-VINI-T2</title>
 </head>
 <body>
-    <center><h1 style= "background-color: coral;">Calculadora  da Altura Máxima e o Tempo de Subida da Bola</h1></center>
+    <center><h1></h1></center>
 
-    <p style="font-weight: bold;">Insira a velocidade inicial no espaço abaixo:</p>
+    <input type="number" id="quantidadePessoas">
 
-    <br>
-    <p id="paragrafo1"></p>  <br />
-    <p id="paragrafo2"></p>
-    <div  class="ok" id="resu">
- 
+<label for="Período">Selecione o período</label>
 
-    </div>
-    <input type="text" name="valor1" id="v1">
-    <button onclick="calcular()"> Calcular Tempo de Subida e Altura Máxima</button>
+<select id="Período">
+  <option value="Diurno">Diurno</option>
+  <option value="Noturno">Noturno</option>
+</select>
+
+<button onclick="Calcular()">Calcular</button>
+
 </html>
 
 
 <script>
 
-    var velo = document.querySelector("#v1");
-    var g = 10
-   
-    var paragrafo1 = document.querySelector("#paragrafo1")
-    var paragrafo2 = document.querySelector("#paragrafo2")
-    function calcular(){
-        var Ts = parseInt(velo.value) / g;
-        var Hmax = parseInt(velo.value ** 2) / parseInt(2*g);
-        paragrafo1.innerHTML = `Tempo de Subida: ${Ts}`
-        paragrafo2.innerHTML = `Altura Máxima: ${Hmax}`
-    }
+ function Calcular() {
+    let diurno = 200;
+    let noturno = 100;
+    let desconto = 0;
+
+if (document.getElementById("quantidadePessoas") < 50) {
+   noturno = desconto * 20/100;
+
+    } else {
+  noturno = 100;
+}
+
+if (document.getElementById(""));
+
+ }
+
+
+
 
 </script>
 </body>
