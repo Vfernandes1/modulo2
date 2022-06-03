@@ -19,7 +19,7 @@ Exercício de Personalização:
 - Agregar o App-61.js no Curriculo
 - Adicionar Banco de Dados 
 
-Link: <a href="https://github.com/Vfernandes1/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%206"></a>
+Link: <a href="[https://github.com/Vfernandes1/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%206]"></a>
 
 
 Semana 7
@@ -34,6 +34,6 @@ Propostas:
 - Informações e dados testados no Postman
 - Resolução dos Exercícios
 
-Link Entrega: <a href="https://github.com/Vfernandes1/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%207"></a>
-Link Obrigatório: <a href="https://github.com/Vfernandes1/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207"></a>
+Link Entrega: <a href="[https://github.com/Vfernandes1/modulo2/tree/main/03_AUT_EST_ENTREGA/Semana%207]"></a>
+Link Obrigatório: <a href="[https://github.com/Vfernandes1/modulo2/tree/main/04_AUT_EST_EX_OBRIGATORIOS/Semana%207]"></a>
 
