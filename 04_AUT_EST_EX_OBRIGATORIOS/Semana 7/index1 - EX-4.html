@@ -7,18 +7,24 @@
     <title>AUT-EST-VINI-T2</title>
 </head>
 <body>
-    <center><h1></h1></center>
+    <center><h1>EXERCÍCIO 4 - VINÍCIUS OLIVEIRA FERNANDES</h1></center>
 
-    <input type="number" id="quantidadePessoas">
 
-<label for="Período">Selecione o período</label>
-
-<select id="Periodo">
-  <option value="Diurno">Diurno</option>
-  <option value="Noturno">Noturno</option>
-</select>
-
-<button onclick="Calcular()">Calcular</button>
+    <center>
+      <input type="number" id="quantidadePessoas">
+    </center>
+<br>
+<!-- queria fazer do jeito com duas opções pra selecionar e fiquei feliz que consegue fazer acontecer -->
+<center>
+  <select id="PeriodoDIA">
+    <option value="Diurno">Diurno</option>
+    <option value="Noturno">Noturno</option>
+  </select>
+</center>
+<br>
+<br>
+<br>
+<center><button onclick="Calcular()">Calcular</button></center>
 
 </html>
 
@@ -26,22 +32,43 @@
 <script>
 
  function Calcular() {
-    let diurno = 200;
-    let noturno = 100;
-    let desconto = 0;
+  //  Definição das variáveis, determinando a instância do preço
+  // As outras são "input" pegando o valor ("value" - ou seja as opções na parte de select)
 
-if (document.getElementById("Periodo") < 50) {
-   noturno = desconto * 20/100;
+    let preco = 0;
+    let periodoND = document.getElementById("PeriodoDIA").value;
+    let quantidadePessoas = document.getElementById("quantidadePessoas").value;
+    
+
+if(periodoND = "Diurno"){
+
+// Primeira Condição da Função - para calcular valor por pessoa Diurno
+// já que o desconto vai ser de 40% eu defini 60% como o resto que ele irá pagar de porcentagem
+
+  if (quantidadePessoas > 50) {
+   preco = 200 * 60/100; 
 
     } else {
-  noturno = 100;
+      preco = 200;
+    }
+
 }
 
-if (document.getElementById(""));
+// Primeira Condição da Função - para calcular valor por pessoa Diurno
+// Mais uma vez o desconto vai ser de 20% eu defini 80% como o resto que ele irá pagar de porcentagem
 
- }
+  if(periodoND = "Noturno") {
+    if (quantidadePessoas > 50) {
+     preco = 100 * 80/100;
 
+    } else {
+      preco = 100;
+    }
+}
 
+  alert('O preço sera de R$ ' + preco + ' por pessoa');
+
+}
 
 
 </script>
