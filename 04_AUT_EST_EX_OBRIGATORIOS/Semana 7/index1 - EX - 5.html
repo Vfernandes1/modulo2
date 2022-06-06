@@ -7,35 +7,49 @@
     <title>AUT-EST-VINI-T2</title>
 </head>
 <body>
-    <center><h1 style= "background-color: coral;">Calculadora  da Altura Máxima e o Tempo de Subida da Bola</h1></center>
+    <script src="script.js"></script>
+    <div id="main">
+        <h1>EXERCÍCIO 5 - VINÍCIUS OLIVEIRA FERNANDES</h1>
+        
+        <br />
+        <div>
 
-    <p style="font-weight: bold;">Insira a velocidade inicial no espaço abaixo:</p>
+            <input type="number" id="quantidadeAlunos">
+            <button onclick="Alunos()" class="button-calc"> Mostrar alunos </button>
 
-    <br>
-    <p id="paragrafo1"></p>  <br />
-    <p id="paragrafo2"></p>
-    <div  class="ok" id="resu">
- 
+        </div>
+
+        <div id="listaAlunos"></div>
+
+        <div id="listaMédias"></div>
+
+        <div id="outrasMédias">
+
+        </div>
 
     </div>
-    <input type="text" name="valor1" id="v1">
-    <button onclick="calcular()"> Calcular Tempo de Subida e Altura Máxima</button>
 </html>
 
 
 <script>
 
-    var velo = document.querySelector("#v1");
-    var g = 10
-   
-    var paragrafo1 = document.querySelector("#paragrafo1")
-    var paragrafo2 = document.querySelector("#paragrafo2")
-    function calcular(){
-        var Ts = parseInt(velo.value) / g;
-        var Hmax = parseInt(velo.value ** 2) / parseInt(2*g);
-        paragrafo1.innerHTML = `Tempo de Subida: ${Ts}`
-        paragrafo2.innerHTML = `Altura Máxima: ${Hmax}`
+function Alunos() {
+    // função que documenta o valor dos inputs
+    quantidadeAlunos = document.getElementById('quantidadeAlunos').value;
+    // determinação de uma variável do valor i para começo e delimitação da função
+    let i = 0;
+    
+    while (i < quantidadeAlunos) {
+        document.getElementById("listaAlunos").innerHTML += `<br /> <label> Aluno ${i + 1}: </label> <input type="number" id="notaProva${i + 1}" placeholder="Prova"> <input type="number" id="notaTrabalho${i + 1}" placeholder="Trabalho">`;
+        i++
     }
+    document.getElementById("listaAlunos").innerHTML += `<br /> <br /> <button onclick="Calculate()" class="button-calc"> Mostrar Médias </button>`;
+}
+
+function Calculo() {
+    
+
+};
 
 </script>
 </body>
