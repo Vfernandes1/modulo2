@@ -15,7 +15,10 @@
         <div>
 
             <input type="number" id="quantidadeAlunos">
-            <button onclick="Alunos()" class="button-calc"> Mostrar alunos </button>
+            <button onclick="Alunos()" class="button-calc">Alunos</button>
+            <input type="number" id="notaProva" placeholder="Prova"></input> 
+            <input type="number" id="notaTrabalho" placeholder="Trabalho"></input>
+            <button onclick="Calculo()" class="button-calc">Médias</button>;
 
         </div>
 
@@ -34,22 +37,75 @@
 <script>
 
 function Alunos() {
-    // função que documenta o valor dos inputs
+    // referência ao Input da quantidade de alunos
     quantidadeAlunos = document.getElementById('quantidadeAlunos').value;
-    // determinação de uma variável do valor i para começo e delimitação da função
-    let i = 0;
+    // Variável "i" para contagem dentro da função
+    var i = 0;
     
     while (i < quantidadeAlunos) {
-        document.getElementById("listaAlunos").innerHTML += `<br /> <label> Aluno ${i + 1}: </label> <input type="number" id="notaProva${i + 1}" placeholder="Prova"> <input type="number" id="notaTrabalho${i + 1}" placeholder="Trabalho">`;
-        i++
+        document.getElementById("listaAlunos").innerHTML; 
+        
+
     }
-    document.getElementById("listaAlunos").innerHTML += `<br /> <br /> <button onclick="Calculate()" class="button-calc"> Mostrar Médias </button>`;
+    document.getElementById("listaAlunos").innerHTML; 
+  
+    
 }
 
 function Calculo() {
     
 
-};
+    // Média de cada Aluno:
+    var v = 0; // Variável de Contagem
+    var num_Media = 0; // Média Geral
+    var num_MP = 0; // Média das Provas
+    var num_MT = 0; // Média dos Trabalhos 
+    var maior_NP = 0; // Valor referenciando a Maior Nota das Provas
+    var maior_NT = 0; // Valor referenciando a Maior Nota dos Trabalhos
+    var alunomaior_NP = 0; // Maior nota do Aluno na Prova
+    var alunomaior_NT = 0; // Maior nota do Aluno na Prova
 
+    
+    var menor_NP = 0; 
+    var menor_NT = 0;
+    var alunomenor_NT = 0; 
+    var alunomenor_NT = 0;
+
+    while (v < quantidadeAlunos) {
+        idnotaProva = String("notaProva" + String(v + 1));
+        prova = Number(document.getElementById(idnotaProva).value);
+        idnotaTrabalho = String("notaTrabalho" + String(v + 1)); // idem
+        trabalho = Number(document.getElementById(idnotaTrabalho).value); // idem para trabalho
+
+        media = ((2 * prova + 3 * trabalho) / 5); // Calculo para definir média de cada aluno
+        num_Media += media; 
+        num_MP += prova; 
+        num_MT += trabalho; 
+
+        // para os esquemas de descobrir quais são as maiores e menores notas
+   
+        if (maior_NP < prova) {
+            maior_NP = prova;
+            alunomaior_NP = v + 1;
+        } else {
+            maior_NT < trabalho
+            maior_NT = trabalho;
+            alunomaior_NT = v + 1;
+        };
+        if (menor_NP > prova) {
+            menor_NP = prova;
+            alunomenor_NT = v + 1;
+
+        } else {
+            menor_NT > trabalho
+            menor_NT = trabalho;
+            alunoMenorNotaTrabalho = v + 1;
+        };
+
+
+        
+    };
+
+};
 </script>
 </body>
