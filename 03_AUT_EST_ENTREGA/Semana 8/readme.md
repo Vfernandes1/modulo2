@@ -1,9 +1,9 @@
-# Vinícius Fernandes - Exercício Entrega - SEMANA 7
+# Vinícius Fernandes - Exercício Entrega - SEMANA 8
 
 ## Descrição
-Endpoints criados, com todos os métodos que foram apresentados em aula.
+Integração backend e frontend (Área de Comentários)
 
 ## Entrega
-03/06/2022
-- Construção de todos os Endpoints para realizar todas as operações CRUD do Banco de Dados (create, read, update, delete)
-- Informações e dados testados no Postman
+10/06/2022
+- Integração feita no Método *POST* 
+- Comentários vão diretamente pro Banco de Dados
