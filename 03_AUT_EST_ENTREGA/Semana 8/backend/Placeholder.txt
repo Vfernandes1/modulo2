@@ -1,0 +1,6 @@
+Entrega - Vinícius Fernandes
+
+27/05/2022
+
+- Agregar o App-61.js no Curriculo
+- Adicionar Banco de Dados
