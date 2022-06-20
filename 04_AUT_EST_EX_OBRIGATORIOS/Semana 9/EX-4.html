@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT-VINI-SEM9-EX4</title>
+</head>
+<body>
+    <body>
+        <div>
+            <!-- identificação dos inputs e lugares de retorno de informação -->
+          <h2>Quantidade valor da sequência</h2>
+          <input type="number" id="valor">
+          <br>
+          <br>
+          <button onclick="fibonacci()">Olha! O Fibonacci</button>
+        </div>
+        <br>
+        <h4 id="resultado"></h4>
+      </body>
+
+    <script>
+        // Declaracao das variáveis para realizacao do calculo
+       function fibonacci() {
+        let valor = document.getElementById("valor").value;
+        let fibo = [];
+        fibo[0] = 1;
+        fibo[1] = 1;
+
+        let total = document.getElementById("resultado");
+        //Lista feita para quando valor for maior que i, a formula ser executada no array
+        for (i = 2; i < valor; i++) {
+          fibo[i] = fibo[i - 2] + fibo[i - 1];
+     }
+    //  Retorno do valor estabelecido na variável total e o resultado da lista "fibo"
+     total.innerHTML = fibo;
+}
+
+    </script>
+</body>
+</html>

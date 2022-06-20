@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT-VINI-SEM9-EX2</title>
+</head>
+<body>
+    <h1>Exercício 2</h1>
+
+    <div>
+        <label>Digite o valor 
+            <input type="text" id="valor">
+        </label>
+        <button onclick="cal()">Calcular</button>
+        <br>
+        <br>
+        <h4 id="montante_final"></h4>
+    </div>
+
+    <script>
+        // função usada para calculo 
+        function cal(){
+        let soma = 0;
+        let numero = Number(document.getElementById("valor").value);
+        
+
+        while (numero > 0) {
+            restante = numero % 10; //Evidenciar o último número em questão
+            numero = (numero-restante)/10; //Divisão, da subtração das variáveis, por 10
+            soma = soma + restante; // Soma dos valores para mostrar o resultado
+    }
+    // printar o resultado "soma" na página
+    document.getElementById("montante_final").innerHTML = "Sobre os valores conjugados, a soma dos dígitos é " + soma ;
+}
+
+    </script>
+</body>
+</html>

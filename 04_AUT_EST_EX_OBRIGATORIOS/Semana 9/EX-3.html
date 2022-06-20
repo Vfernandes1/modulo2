@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUT-VINI-SEM9-EX3</title>
+</head>
+<body>
+    <body>
+        <body>
+            <h1>Exercício 3</h1>
+            <h3> Ordenação Das Palavras </h3>
+            <!-- identificação dos três nomes que serão inseridos para ordenação -->
+            <label for="texto" > Os três nomes: </label>
+            <input type="text" id="txt1" value="" name="palavra1">
+            <input type="text" id="txt2" value="" name="palavra2">
+            <input type="text" id="txt3" value="" name="palavra3">
+            <input type="button" id="ordenar" value="ORDENE" name="ordenar" onclick="ordemNomes()">
+            <br>
+            <br>
+            <h4 id="crescente"></h4>
+        
+    </body>
+
+    <script>
+    function ordemNomes() {
+        // funções que vão puxar o valor (nome em si) que foram resgistrados no input
+        let palavra1 = document.getElementById('txt1').value;
+        let palavra2 = document.getElementById('txt2').value;
+        let palavra3 = document.getElementById('txt3').value;
+        let palavras =  [palavra1, palavra2, palavra3];
+        
+        // ordenação das palavras
+        palavras.sort (); 
+
+    // Retorno das palavras em ordem crescente, puxando as "palavras" e registrando no espaço "crescente"   
+    document.getElementById('crescente').innerHTML = "As palavras inseridas são em ordem alfabética: " + palavras;
+}
+    </script>
+</body>
+</html>
