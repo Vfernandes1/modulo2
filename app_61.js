@@ -1,7 +1,7 @@
 const express = require('express'); 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
-const hostname = '127.0.0.1';
+
 
 const port = 3061;
 const sqlite3 = require('sqlite3').verbose();
@@ -46,4 +46,8 @@ app.post('/userinsert', urlencodedParser, (req, res) => {
 	});
 	db.close(); // Fecha o banco
 	res.end();
+
+
+app.listen(process.env.PORT, () => {
+	console.log(`Server running!`);
 });
