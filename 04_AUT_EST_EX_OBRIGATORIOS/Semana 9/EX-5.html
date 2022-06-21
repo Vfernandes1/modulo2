@@ -8,9 +8,36 @@
 </head>
 <body>
     <h1>Exercício 5</h1>
- 
-    <script>
-   
-    </script>
+
+    <div>
+        <h4>No campo abaixo, digite dois números separados por uma virgúla para encontrar os números primos</h4>
+            <input type="text" id="primos">
+    </div>
+    <br>
+    <br>
+    <button onclick="numPrim()">Separe</button>
+<script>
+    function numPrim(){
+        var numeroRep = document.getElementById("primos").value;
+        var nP = numeroRep.split(", ");
+        nP.sort((a,b) => a - b); 
+        var primeiroValor = Number(nP[0])
+        var segundoValor = Number(nP[1])
+        var lista = []
+    for (var i = primeiroValor; i <= segundoValor; i++) {
+        var int = 0
+        for (var p = 2; p < i; p++) {
+            if (i % p == 0) {
+                int = 1
+                break
+            }
+        }
+        if (int == 0 && i > 1) {
+            lista.push(i)
+        }
+    }
+    console.log(lista);
+}
+</script>
 </body>
 </html>
