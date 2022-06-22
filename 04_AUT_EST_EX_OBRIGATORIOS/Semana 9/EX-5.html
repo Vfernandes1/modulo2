@@ -19,11 +19,19 @@
 <script>
     function numPrim(){
         var numeroRep = document.getElementById("primos").value;
+        // variável nP que utiliza split para delimitar a ordenação por meio de vírgula
         var nP = numeroRep.split(", ");
+
+        // agora uso do sort para comparar os valores e ordená-los 
         nP.sort((a,b) => a - b); 
+        
+        // identificação dos números para começo da lista
         var primeiroValor = Number(nP[0])
         var segundoValor = Number(nP[1])
+        // variável da lista
         var lista = []
+     
+    // loop de repetição usado pelo for e if's para testar e fazer verificação dos números    
     for (var i = primeiroValor; i <= segundoValor; i++) {
         var int = 0
         for (var p = 2; p < i; p++) {

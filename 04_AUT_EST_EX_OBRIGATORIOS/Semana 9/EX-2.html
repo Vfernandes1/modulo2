@@ -10,9 +10,9 @@
     <h1>Exercício 2</h1>
 
     <div>
-        <label>Digite o valor 
+        <h3> Digite o valor 
             <input type="text" id="valor">
-        </label>
+        </h3>
         <button onclick="cal()">Calcular</button>
         <br>
         <br>
@@ -20,10 +20,12 @@
     </div>
 
     <script>
-        // função usada para calculo 
+        // Função que será usada para o cálculo 
         function cal(){
-        let soma = 0;
+        let soma = 0; 
+        // atribuição da variável "soma" para cálculo final
         let numero = Number(document.getElementById("valor").value);
+        // seleciona o input evidenciado e traz para a variável
         
 
         while (numero > 0) {
@@ -31,8 +33,9 @@
             numero = (numero-restante)/10; //Divisão, da subtração das variáveis, por 10
             soma = soma + restante; // Soma dos valores para mostrar o resultado
     }
-    // printar o resultado "soma" na página
+    
     document.getElementById("montante_final").innerHTML = "Sobre os valores conjugados, a soma dos dígitos é " + soma ;
+    // printar o resultado "soma" na página
 }
 
     </script>
