@@ -37,6 +37,9 @@ app.post('/userinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
+	// Nesta parte segmenta e delimita que todo o texto que for escrito na parte de "Comentario" vai direto 
+	// para Tabela do meu banco de dados que foi referenciado acima
+
 	sql = "INSERT INTO Comentario (Comentario1) VALUES ('" + req.body.comentario + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
